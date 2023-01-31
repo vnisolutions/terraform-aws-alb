@@ -33,6 +33,12 @@ variable "domain" {
   type        = string
 }
 
+variable "container_port" {
+  description = "Name to be used on all the resources as identifier"
+  type        = string
+  default     = "80"
+}
+
 variable "sg_ingress" {
   description = "The ID of the VPC in which the endpoint will be used"
   type        = list(string)

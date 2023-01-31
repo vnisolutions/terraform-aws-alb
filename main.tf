@@ -13,7 +13,7 @@ resource "aws_lb" "alb" {
 
 resource "aws_lb_target_group" "alb-tg" {
   name        = "${var.env}-${var.project_name}-${var.service_name}-tg"
-  port        = "80"
+  port        = var.container_port
   protocol    = "HTTP"
   target_type = "ip"
   vpc_id      = var.vpc_id
